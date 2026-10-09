@@ -1,0 +1,3 @@
+import {NavLink,Outlet} from 'react-router-dom'
+const links=['Products','Categories','Subcategories','Brands','Suppliers','Customers','Warehouses','Inventory','Purchases','Sales','Returns','Reports','Audit Logs','Users & Roles']
+export default function AppLayout(){return <div className="shell"><aside><div className="brand"><b>I</b> Index<span>X</span></div><small>WORKSPACE</small><nav><NavLink to="/" end>Overview</NavLink>{links.map(x=><NavLink key={x} to={'/'+x.toLowerCase().replaceAll(' ','-')}>{x}</NavLink>)}</nav><footer>ADMINISTRATOR<br/><small>System workspace</small></footer></aside><main><header>IndexX <span>/ Operations</span></header><section><Outlet/></section></main></div>}

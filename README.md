@@ -39,4 +39,8 @@ The API defaults to `http://localhost:8080/api`; Vite serves the client at `http
 
 ## Foundation scope
 
-The first migration establishes normalized identity, product classification, business party, warehouse, product, and inventory tables, with foreign keys, unique constraints, checks, and useful indexes. The initial API exposes a health endpoint and API DTOs. Purchasing, sales, returns, reports, audit workflows, and authentication are intentionally future modules.
+The database migrations establish normalized identity, product classification, business parties, warehouses, inventory, purchasing, sales, returns, audit history, and reporting views. The backend exposes health checks plus DTO-based CRUD and paginated search for products, categories, subcategories, and brands. Supplier/customer/warehouse APIs, transaction workflows, reports, and authentication remain future modules.
+
+## Database demonstration data
+
+Repeatable normal and large PostgreSQL data profiles, safe reset guidance for a dedicated `indexx_demo` database, verification queries, and `EXPLAIN ANALYZE` examples are documented in [DATABASE_SEEDING.md](DATABASE_SEEDING.md).
